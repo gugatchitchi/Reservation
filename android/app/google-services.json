@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "884850457619",
+    "firebase_url": "https://leonardo-9637c.firebaseio.com",
+    "project_id": "leonardo-9637c",
+    "storage_bucket": "leonardo-9637c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884850457619:android:fd7ca8cee2b79cfcbad3e6",
+        "android_client_info": {
+          "package_name": "com.example.code"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884850457619-vajcubsfmeciuoanme2pj3hd7dj0bmg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOhMnbIVJdPpZWP2R4__bQ5J-oRGft4C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884850457619-vajcubsfmeciuoanme2pj3hd7dj0bmg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
