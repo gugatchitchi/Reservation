@@ -98,7 +98,8 @@ Widget _categories(List<Category> categories) {
     ),
     delegate: SliverChildBuilderDelegate(
       (BuildContext context, int index) {
-        return _categoryItem('assets/icons/asian.png', categories[index].name);
+        return _categoryItem(categories[index].img, categories[index].name,
+            categories[index].color);
       },
       childCount: categories.length,
     ),
@@ -106,12 +107,12 @@ Widget _categories(List<Category> categories) {
 }
 
 // single item in categories grid
-Widget _categoryItem(String img, String name) {
+Widget _categoryItem(String img, String name, Color color) {
   return Container(
     height: 110.0,
     width: 100,
     decoration: BoxDecoration(
-      color: Palette.accent,
+      color: color,
       borderRadius: BorderRadius.circular(20.0),
     ),
     child: Column(
@@ -126,8 +127,8 @@ Widget _categoryItem(String img, String name) {
             color: Palette.bg,
             borderRadius: BorderRadius.circular(30.0),
           ),
-          child: Image(
-            image: AssetImage(img),
+          child: Image.network(
+            img,
           ),
         ),
         SizedBox(
@@ -138,7 +139,7 @@ Widget _categoryItem(String img, String name) {
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Palette.fontLight,
-            fontSize: 10.0,
+            fontSize: 14.0,
           ),
         ),
       ],
