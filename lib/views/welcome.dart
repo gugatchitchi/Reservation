@@ -88,42 +88,19 @@ Widget _pageHeader() {
 
 // Categories grid
 Widget _categories(List<Category> categories) {
-  return SliverToBoxAdapter(
-    child: Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _categoryItem('assets/icons/asian.png', categories[0].name),
-            SizedBox(width: 10.0),
-            _categoryItem('assets/icons/asian.png', categories[1].name),
-            SizedBox(width: 10.0),
-            _categoryItem('assets/icons/asian.png', categories[2].name),
-          ],
-        ),
-        // SizedBox(height: 10.0),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //     SizedBox(width: 10.0),
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //     SizedBox(width: 10.0),
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //   ],
-        // ),
-        // SizedBox(height: 10.0),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //     SizedBox(width: 10.0),
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //     SizedBox(width: 10.0),
-        //     _categoryItem('assets/icons/asian.png', 'აზიური'),
-        //   ],
-        // ),
-      ],
+  // if (categories != []) {
+  return SliverGrid(
+    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+      maxCrossAxisExtent: 150.0,
+      mainAxisSpacing: 10.0,
+      crossAxisSpacing: 10.0,
+      // childAspectRatio: 4.0,
+    ),
+    delegate: SliverChildBuilderDelegate(
+      (BuildContext context, int index) {
+        return _categoryItem('assets/icons/asian.png', categories[index].name);
+      },
+      childCount: categories.length,
     ),
   );
 }

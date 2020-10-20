@@ -49,33 +49,6 @@ class _PagesState extends State<Pages> {
           bottomNavigationBar: _bottomNav(pages, _controller),
           backgroundColor: Palette.bg,
           extendBody: true,
-          // PageView(
-          //   controller: _controller,
-          //   children: <Widget>[
-          //     pages[0].widget,
-          //     pages[1].widget,
-          //     pages[2].widget,
-          //   ],
-          // ),
-          // FloatingBottomBar(
-          //   controller: _controller,
-          //   items: [
-          //     FloatingBottomBarItem(pages[0].icon, label: null),
-          //     FloatingBottomBarItem(pages[1].icon, label: null),
-          //     FloatingBottomBarItem(pages[2].icon, label: null),
-          //   ],
-          //   activeItemColor: Palette.accent,
-          //   itemColor: Palette.fontGrey,
-          //   enableIconRotation: true,
-          //   onTap: (index) {
-          //     // print('Tapped: item $index');
-          //     _controller.animateToPage(
-          //       index,
-          //       duration: const Duration(milliseconds: 400),
-          //       curve: Curves.easeOut,
-          //     );
-          //   },
-          // ),
         ),
       ),
     );
