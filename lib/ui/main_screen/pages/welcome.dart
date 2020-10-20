@@ -1,19 +1,26 @@
+// imported packages
+import 'package:code/core/models/restaurant_category.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models/models.dart';
-import '../configs/configs.dart';
-import '../widgets/widgets.dart';
+// colors
+import '../../../core/configs/palette.dart';
+// widgets
+import '../shared/header.dart';
+import '../shared/default_sliver_with_padding.dart';
 
+// =======================================
+// This is the first of three pages of main screen
+// =======================================
 class Welcome extends StatelessWidget {
   const Welcome({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final categories = Provider.of<List<Category>>(context);
+    final categories = Provider.of<List<RestaurantCategory>>(context);
 
     return CustomScrollView(
       slivers: [
-        // Page Big Header
+        // Big Header
         DefaultSliverWithPadding(
           top: 60.0,
           sliver: _pageHeader(),
@@ -40,7 +47,7 @@ class Welcome extends StatelessWidget {
   }
 }
 
-// Page Big Header
+// Big Header
 Widget _pageHeader() {
   return SliverToBoxAdapter(
     child: Column(
@@ -87,7 +94,7 @@ Widget _pageHeader() {
 }
 
 // Categories grid
-Widget _categories(List<Category> categories) {
+Widget _categories(List<RestaurantCategory> categories) {
   return SliverGrid(
     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
       maxCrossAxisExtent: 150.0,

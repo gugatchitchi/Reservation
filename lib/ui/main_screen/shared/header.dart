@@ -1,5 +1,6 @@
-import 'package:code/configs/palette.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/configs/palette.dart';
 
 class Header extends StatelessWidget {
   final String blackPart;
