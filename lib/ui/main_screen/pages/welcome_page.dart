@@ -47,6 +47,10 @@ class WelcomePage extends StatelessWidget {
   }
 }
 
+// ===============================================
+// helper local geters to simplify code above
+// ===============================================
+
 // Big Header
 Widget _pageHeader() {
   return SliverToBoxAdapter(

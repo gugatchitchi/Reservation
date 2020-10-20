@@ -10,7 +10,7 @@ class DefaultSliverWithPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverPadding(
       padding: EdgeInsets.only(
-        top: top,
+        top: top == null ? 0.0 : top,
         left: 20.0,
         right: 20.0,
         bottom: 10.0,
