@@ -88,13 +88,11 @@ Widget _pageHeader() {
 
 // Categories grid
 Widget _categories(List<Category> categories) {
-  // if (categories != []) {
   return SliverGrid(
     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
       maxCrossAxisExtent: 150.0,
       mainAxisSpacing: 10.0,
       crossAxisSpacing: 10.0,
-      // childAspectRatio: 4.0,
     ),
     delegate: SliverChildBuilderDelegate(
       (BuildContext context, int index) {
