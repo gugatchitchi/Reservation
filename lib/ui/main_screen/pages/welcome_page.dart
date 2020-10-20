@@ -11,8 +11,8 @@ import '../shared/default_sliver_with_padding.dart';
 // =======================================
 // This is the first of three pages of main screen
 // =======================================
-class Welcome extends StatelessWidget {
-  const Welcome({Key key}) : super(key: key);
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

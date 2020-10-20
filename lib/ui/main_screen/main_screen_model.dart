@@ -1,7 +1,10 @@
+// imported packages
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import 'pages/welcome.dart';
+// pages
+import 'pages/welcome_page.dart';
+import 'pages/order_history_page.dart';
+import 'pages/profile_page.dart';
 
 class MainScreenModel {
   // ==========================================================
@@ -10,9 +13,9 @@ class MainScreenModel {
   // It controls bottom navigation
   // ==========================================================
   static List<_PageModel> pages = [
-    _PageModel(Welcome(), MdiIcons.silverwareForkKnife),
-    _PageModel(Center(child: Text('ჯავშნების ისტორია')), Icons.history),
-    _PageModel(Center(child: Text('პროფილის გვერდი')), MdiIcons.account),
+    _PageModel(WelcomePage(), MdiIcons.silverwareForkKnife),
+    _PageModel(OrderHistoryPage(), Icons.history),
+    _PageModel(ProfilePage(), MdiIcons.account),
   ];
 }
 
